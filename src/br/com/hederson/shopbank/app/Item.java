@@ -1,16 +1,16 @@
 package br.com.hederson.shopbank.app;
 
 
-public class Item{
+public class Item implements Comparable<Item> {
     private String name;
-    private long price;
+    private Double price;
 
-    public Item(String name, long price) {
+    public Item(String name, Double price) {
         this.name = name;
         this.price = price;
     }
 
-    public long getPrice() {
+    public Double getPrice() {
         return price;
     }
 
@@ -21,5 +21,10 @@ public class Item{
     @Override
     public String toString() {
         return "$" + this.getPrice() + " | " + this.getName();
+    }
+
+    @Override
+    public int compareTo(Item otherItem) {
+        return this.getPrice().compareTo(otherItem.getPrice());
     }
 }

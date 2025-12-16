@@ -5,10 +5,12 @@ import br.com.hederson.shopbank.app.Item;
 
 public class Main {
     public static void main(String[] args) {
-        Account myAccount = new Account(700);
-        Item phone = new Item("rog phone", 700);
+        Account myAccount = new Account(7060);
+        Item phone = new Item("rog phone", (double) 700);
         myAccount.addItem(phone);
-        Item item2 = new Item("ola", 33);
+        Item item2 = new Item("ola", (double) 33);
         myAccount.addItem(item2);
+        myAccount.sortedItems();
+        System.out.println(myAccount.getItems());
     }
 }

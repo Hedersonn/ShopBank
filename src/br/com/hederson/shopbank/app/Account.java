@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class Account {
     private double limit;
-    ArrayList<Item> items = new ArrayList<>();
+    private ArrayList<Item> items = new ArrayList<>();
 
     public Account(double limit) {
         this.limit = limit;
@@ -19,7 +19,11 @@ public class Account {
         }
     }
 
-    public void showSortedItems() {
-        //use sort method.
+    public void sortedItems() {
+        Collections.sort(items);
+    }
+
+    public ArrayList<Item> getItems() {
+        return items;
     }
 }
