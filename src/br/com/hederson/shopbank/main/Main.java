@@ -26,6 +26,8 @@ public class Main {
             System.out.println("Continue?\n0 to Stop\n1 to Continue");
             chooseContinue = scan.nextInt();
         }
+        myAccount.sortedItems();
+        System.out.println(myAccount.getItems());
     }
 }
 
