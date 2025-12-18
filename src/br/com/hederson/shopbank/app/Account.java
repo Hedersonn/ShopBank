@@ -14,6 +14,7 @@ public class Account {
     public void addItem(Item item) {
         if (this.limit >= item.getPrice()) {
             items.add(item);
+            this.limit -= item.getPrice();
         } else {
             System.out.println("Insufficient funds.");
         }
