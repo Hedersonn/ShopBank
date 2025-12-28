@@ -5,6 +5,7 @@ import java.util.Collections;
 
 public class Account {
     private double limit;
+    private double balance = limit;
     private ArrayList<Item> items = new ArrayList<>();
 
     public Account(double limit) {
@@ -12,9 +13,9 @@ public class Account {
     }
 
     public void addItem(Item item) {
-        if (this.limit >= item.getPrice()) {
+        if (this.balance >= item.getPrice()) {
             items.add(item);
-            this.limit -= item.getPrice();
+            this.balance -= item.getPrice();
         } else {
             System.out.println("Insufficient funds.");
         }

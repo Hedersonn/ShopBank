@@ -30,5 +30,3 @@ public class Main {
         System.out.println(myAccount.getItems());
     }
 }
-
-//chooseContinue = scan.nextInt();
