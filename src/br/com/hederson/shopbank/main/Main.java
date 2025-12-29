@@ -3,6 +3,7 @@ package br.com.hederson.shopbank.main;
 import br.com.hederson.shopbank.app.Account;
 import br.com.hederson.shopbank.app.Item;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -26,7 +27,10 @@ public class Main {
             System.out.println("Continue?\n0 to Stop\n1 to Continue");
             chooseContinue = scan.nextInt();
         }
+
         myAccount.sortedItems();
-        System.out.println(myAccount.getItems());
+        for(Item item : myAccount.getItems()) {
+            System.out.println(item);
+        }
     }
 }
