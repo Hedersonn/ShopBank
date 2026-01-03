@@ -15,14 +15,13 @@ public class Main {
 
         int chooseContinue = 1;
         while(chooseContinue != 0) {
-
             System.out.print("Product name: ");
             String productName = scan.next();
             System.out.print("Product price: ");
             double productPrice = scan.nextDouble();
             Item item = new Item(productName, productPrice);
-            myAccount.addItem(item);
 
+            if (!myAccount.addItem(item)) {break;}
             System.out.println("Continue?\n0 to Stop\n1 to Continue");
             chooseContinue = scan.nextInt();
         }
