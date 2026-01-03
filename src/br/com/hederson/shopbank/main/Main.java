@@ -3,7 +3,6 @@ package br.com.hederson.shopbank.main;
 import br.com.hederson.shopbank.app.Account;
 import br.com.hederson.shopbank.app.Item;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {

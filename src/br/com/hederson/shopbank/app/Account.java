@@ -13,14 +13,14 @@ public class Account {
         this.balance = limit;
     }
 
-    public int addItem(Item item) {
+    public boolean addItem(Item item) {
         if (this.balance >= item.getPrice()) {
             items.add(item);
             this.balance -= item.getPrice();
-            return 1;
+            return true;
         } else {
             System.out.println("Insufficient funds.");
-            return 2;
+            return false;
         }
     }
 
