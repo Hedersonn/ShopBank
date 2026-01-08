@@ -3,14 +3,14 @@ package br.com.hederson.shopbank.app;
 
 public class Item implements Comparable<Item> {
     private String name;
-    private Double price;
+    private double price;
 
     public Item(String name, Double price) {
         this.name = name;
         this.price = price;
     }
 
-    public Double getPrice() {
+    public double getPrice() {
         return price;
     }
 
@@ -25,6 +25,6 @@ public class Item implements Comparable<Item> {
 
     @Override
     public int compareTo(Item otherItem) {
-        return this.getPrice().compareTo(otherItem.getPrice());
+        return Double.valueOf(this.getPrice()).compareTo(Double.valueOf(otherItem.getPrice()));
     }
 }
